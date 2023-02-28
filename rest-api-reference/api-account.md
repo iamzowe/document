@@ -24,7 +24,7 @@ Retrieve all available deposit addresses of a user.
 
 | Name | Type | Description |
 | :---- | :---- | :---- |
-| code | int | see [Error Code](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-error-code.md) |
+| code | int | see [Error Code](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-enum.md#error-code) |
 | data[i].address | string |  |
 | data[i].currency | string |  |
 | data[i].network | string |  |
@@ -79,6 +79,8 @@ curl 'https://api.cpay.ltd/openapi/v1/getWalletAddress?merchantId={merchantId}&u
     "traceid": "221117074719X9921729"
 }
 ```
+---
+
 # Query Merchant's Balance
 
 ## Description
@@ -98,11 +100,11 @@ Retrieve balance of merchant's accounts.
 
 | Name | Type | Description |
 | :---- | :---- | :---- |
-| code | int | see [Error Code](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-error-code.md) |
+| code | int | see [Error Code](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-enum.md#error-code) |
 | data[i].availableBalance | string | balance of `checking account`, can be withdrawn and spent |
 | data[i].freezeBalance | string | balance of `blocked account`, it will be transfer to `checking account` in time |
 | data[i].currency | string |  |
-| data[i].cryptoCurrency | string | deprecated |
+| data[i].cryptoCurrency | string | ~~deprecated~~ |
 
 ## Example
 
@@ -161,3 +163,4 @@ curl 'https://api.cpay.ltd/openapi/v1/getMerchantBalance?merchantId={merchantId}
   "traceid": "221117075237X7604753"
 }
 ```
+---
