@@ -1,13 +1,16 @@
-# CPay Crypto Payment Gateway For WordPress
+# Integration Tutorial for WordPress
 
-`CPay Crypto Payment Gateway` is a plugin of WordPress written in PHP.
+Welcome to the integration tutorial. In this section, we will show details how best to integrate with our APIs.
+
+> This tutorial applies to both `CPay Credit Card Payment Gateway` and `CPay Crypto Payment Gateway`
+
 
 # Quickstart
 
 ## Prerequisites
 - WordPress (version 6.1.1+)
 - WooCommerce Plugin
-- MerchantID and SecurityKey (from CPay)
+- Host, MerchantID and SecurityKey (from CPay)
 
 
 ## Install
@@ -24,42 +27,38 @@
 > ![install-by-git](https://static.cpay.ltd/images/docs/install-by-git.png)
 
 
-
 ### or By Uploading
 
 1. Download zip from the endpoint (`https://github.com/cpayfinance/cpay-crypto-gateway-wp/archive/refs/heads/main.zip`).
 
-2. Sign in administrator's dashboard of WordPress and upload the zip by following these steps: 
+2. Sign in administrator's dashboard of WordPress and upload the zip by following these steps:  
    go to `Plugins` => `Add New` => `Upload Plugin` => `Select Files` => `Install Now` => `Go to Plugin Installer`.
 
 > See the figure below:  
 > ![install-by-uploading](https://static.cpay.ltd/images/docs/install-by-uploading.png)
 
 
-
 ## Activate Plugin
 1. Sign in administrator's dashboard of WordPress.
 
-2. Activate it: 
+2. Activate it:  
    go to `Plugins` => `Installed Plugins` => `Inactive` => activate `CPay Crypto Payment Gateway`.
-
-
+   
 
 ## Config
 1. Sign in administrator's dashboard of WordPress.
 
-2. Enable it:
+2. Enable it:  
    go to `WooCommerce` => `Settings` => `Payments` => open `CPay Crypto Enabled` => click `Save changes`.
 
 > See the figure below:  
 > ![enable-it](https://static.cpay.ltd/images/docs/enable-it.png)
 
-3. Set configuration:
+3. Set configuration:  
    go to `WooCommerce` => `Settings` => `Payments` => `CPay Crypto` => click `Manage` => click `Save changes`.
 
 > See the figure below:  
 > ![config-it](https://static.cpay.ltd/images/docs/config-it.png)
-
 
 
 ## Using
