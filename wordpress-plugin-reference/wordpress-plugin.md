@@ -5,8 +5,6 @@ Welcome to the integration tutorial. In this section, we will show details how b
 > This tutorial applies to both `CPay Credit Card Payment Gateway` and `CPay Crypto Payment Gateway`
 
 
-# Quickstart
-
 ## Prerequisites
 - WordPress (version 6.1.1+)
 - WooCommerce Plugin
