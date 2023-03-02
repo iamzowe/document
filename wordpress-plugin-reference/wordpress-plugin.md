@@ -13,7 +13,7 @@ Welcome to the integration tutorial. In this section, we will show details how b
 - Host, MerchantID and SecurityKey (from CPay)
 
 
-## Install
+## Installation
 
 ### By Git
 
@@ -38,14 +38,14 @@ Welcome to the integration tutorial. In this section, we will show details how b
 > ![install-by-uploading](https://static.cpay.ltd/images/docs/install-by-uploading.png)
 
 
-## Activate Plugin
+## Activation
 1. Sign in administrator's dashboard of WordPress.
 
 2. Activate it:  
    go to `Plugins` => `Installed Plugins` => `Inactive` => activate `CPay Crypto Payment Gateway`.
    
 
-## Config
+## Configuration
 1. Sign in administrator's dashboard of WordPress.
 
 2. Enable it:  
