@@ -59,7 +59,7 @@ Welcome to the integration tutorial. In this section, we will show details how b
 > ![config-it](https://static.cpay.ltd/images/docs/config-it.png)
 
 
-## Using
+## Usage
 After doing these steps, users will be shown payment option of `CPay Crypto` on the page of `Checkout`.
 
 > See the figure below:  
