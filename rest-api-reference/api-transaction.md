@@ -26,7 +26,7 @@ Transfer cryptocurrency to external crypto wallet.
 | toAddress | string(64) | yes | address of external crypto wallet  |
 | sign | string(64) | yes | see [Signature](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-signature.md) |
 
-## Response
+### Response
 
 | Name | Type | Description |
 | :---- | :---- | :---- |
@@ -43,7 +43,7 @@ Transfer cryptocurrency to external crypto wallet.
 | data.merchantUserId | string | same as request parameter of `userId` |
 | data.createTime | long | timestamp(ms) when order created in cpay|
 
-## Example
+### Example
 
 ```shell
 curl -X POST 'https://{domain}/openapi/v1/withdraw' \
@@ -73,15 +73,15 @@ curl -X POST 'https://{domain}/openapi/v1/withdraw' \
 ```
 ---
 
-# Create Crypto Order for Pay-in
+## Create Crypto Order for Pay-in
 
-## Description
+### Description
 Create a new order for crypto pay-in.
 
-## Endpoint
+### Endpoint
 **POST** `http[s]://{domain}/openapi/v1/createCryptoOrder`
 
-## Parameters
+### Parameters
 
 | Name | Type | Mandatory | Description |
 | :---- | :---- | :---- | :---- |
@@ -96,7 +96,7 @@ Create a new order for crypto pay-in.
 | failURL | string(256) | no | the endpoint is used to navigate the users back to the partner's landing page when payment failed  |
 | sign | string(64) | yes | see [Signature](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-signature.md) |
 
-## Response
+### Response
 
 | Name | Type | Description |
 | :---- | :---- | :---- |
@@ -113,7 +113,7 @@ Create a new order for crypto pay-in.
 | data.failURL | string | same as request parameter of `failURL` |
 | data.remark | string | |
 
-## Example
+### Example
 
 ```shell
 curl -X POST 'https://{domain}/openapi/v1/createCryptoOrder' \
@@ -144,15 +144,15 @@ curl -X POST 'https://{domain}/openapi/v1/createCryptoOrder' \
 
 ---
 
-# Create Credit Card Order for Pay-in
+## Create Credit Card Order for Pay-in
 
-## Description
+### Description
 Create a new order for credit card pay-in.
 
-## Endpoint
+### Endpoint
 **POST** `http[s]://{domain}/openapi/v1/createCreditCardOrder`
 
-## Parameters
+### Parameters
 
 | Name | Type | Mandatory | Description |
 | :---- | :---- | :---- | :---- |
@@ -171,7 +171,7 @@ Create a new order for credit card pay-in.
 | failURL | string(256) | no | the endpoint is used to navigate the users back to the partner's landing page when payment failed  |
 | sign | string(64) | yes | see [Signature](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-signature.md) |
 
-## Response
+### Response
 
 | Name | Type | Description |
 | :---- | :---- | :---- |
@@ -190,7 +190,7 @@ Create a new order for credit card pay-in.
 | data.failURL | string | same as request parameter of `failURL` |
 | data.sign | string |  |
 
-## Example
+### Example
 
 ```shell
 curl -X POST 'https://{domain}/openapi/v1/createCreditCardOrder' \
@@ -223,15 +223,15 @@ curl -X POST 'https://{domain}/openapi/v1/createCreditCardOrder' \
 
 ---
 
-# Query Payment Order Info
+## Query Payment Order Info
 
-## Description
+### Description
 Retrieve info of a payment order.
 
-## Endpoint
+### Endpoint
 **GET** `http[s]://{domain}/openapi/v1/getOrderDetail`
 
-## Parameters
+### Parameters
 
 | Name | Type | Mandatory | Description |
 | :---- | :---- | :---- | :---- |
@@ -242,7 +242,7 @@ Retrieve info of a payment order.
 | sign | string(64) | yes | see [Signature](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-signature.md) |
 
 > `merchantTradeNo`, `cpayOrderId` and `hash` can not be empty at the same time.
-## Response
+### Response
 
 | Name | Type | Description |
 | :---- | :---- | :---- |
@@ -262,7 +262,7 @@ Retrieve info of a payment order.
 | data.remark | string |  |
 | data.createTime | long |  |
 
-## Example
+### Example
 
 ```shell
 curl -X POST 'https://{domain}/openapi/v1/getOrderDetail?merchantId={merchantId}&merchantTradeNo={merchantTradeNo}&hash={hash}&cpayOrderId={cpayOrderId}&sign={sign}' \
