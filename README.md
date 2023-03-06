@@ -28,13 +28,15 @@
 
 
 
-## Step 1: Get Credentials
+## Integration Flow
+
+### Step 1: Get Credentials
 Partners will be provided with the following credentials:
 - `MerchantID`
 - `SecurityKey`
 - `API Host`, see [here](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-host.md)
 
-## Step 2: Authentication
+### Step 2: Authentication
 The request message will be hashed with the API `SecurityKey` using `SHA256` algorithm.
 
 Examples:
@@ -55,19 +57,29 @@ curl -X POST 'https://domain/openapi/v1/updateSth' -d 'xx=1001&yy=&aa=hello&sign
 
 > See a demo [here](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-signature.md)
 
-## Step 3: Start to Integrate with CPay
+### Step 3: Start to Integrate with CPay APIs
 
-### Using SDK (_recommend_)
-
-
-### Using REST APIs
+#### Using SDK (_recommend_)
 
 
-### Using WordPress Plugin
+#### Using REST APIs
+
+1. Create Payment Order
+- [Create Crypto Order for Pay-in](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#create-crypto-order-for-pay-in)
+- [Create Credit Card Order for Pay-in](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#create-credit-card-order-for-pay-in)
+
+2. Query Payment Order Info
+- [Query Payment Order Info](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#query-payment-order-info)
+
+3. Create Withdrawal Order
+- [Create Withdrawal Order](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#create-withdrawal-order)
+
+#### Using WordPress Plugin
+- [Integration Tutorial for WordPress](https://github.com/cpayfinance/document/blob/main/wordpress-plugin-reference/wordpress-plugin.md)
 
 ## Q&A
 Q1: What are the similarities and differences between `Mode 1` and `Mode 2` ?
-> Answers:
+> 
 >> Similarities:
 >> - The same API `Create Credit Card Order for Pay-in` will be called with same parameters in `step 1.2`.
 >> - CPay will notify partners in `step 5`, and retry in ten times until receiving `success`.
@@ -77,7 +89,7 @@ Q1: What are the similarities and differences between `Mode 1` and `Mode 2` ?
 
 
 Q2: What are the similarities and differences between `Mode 3` and `Mode 4` ?
-> Answers:
+> 
 >> Similarities:
 >> - 都是数字货币收款
 >
@@ -86,7 +98,7 @@ Q2: What are the similarities and differences between `Mode 3` and `Mode 4` ?
 
 
 Q3: How to configure notify url ? 
-> Answers:
->> The url can be passed by parameter `callBackURL` or configured in `CPay Merchant System`.  
->> If the url was both configured at the same time, the value passed by parameter `callBackURL` will be used first.
+> 
+> The url can be passed by parameter `callBackURL` or configured in `CPay Merchant System`.  
+> If the url was both configured at the same time, the value passed by parameter `callBackURL` will be used first.
 
