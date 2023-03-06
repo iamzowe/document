@@ -1,15 +1,17 @@
-# Webhooks
+# Transaction APIs
+
+## Webhooks
 
 
-# Withdrawal
+## Withdrawal
 
-## Description
+### Description
 Transfer cryptocurrency to external crypto wallet.
 
-## Endpoint
+### Endpoint
 **POST** `http[s]://{domain}/openapi/v1/withdraw`
 
-## Parameters
+### Parameters
 
 | Name | Type | Mandatory | Description |
 | :---- | :---- | :---- | :---- |
