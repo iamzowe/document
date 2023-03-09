@@ -1,6 +1,6 @@
 # Integration Tutorial for WordPress
 
-Welcome to the integration tutorial. In this section, we will show details how best to integrate with our APIs.
+Welcome to the integration tutorial. In this section, we will show details how best to install the plugin.
 
 > This tutorial applies to both `CPay Credit Card Payment Gateway` and `CPay Crypto Payment Gateway`
 
