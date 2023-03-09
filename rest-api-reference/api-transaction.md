@@ -1,4 +1,4 @@
-# Transaction APIs
+# APIs of Transaction
 
 ## Webhooks
 
