@@ -12,6 +12,9 @@ Welcome to the integration tutorial. In this section, we will show details how b
 
 
 ## Installation
+Before installing the plugin, please confirm whether to use plugin `CPay Crypto`, `CPay Credit Card`, or both.
+- `CPay Credit Card` is for credit card payment, go to repository of [CPay Credit Card](https://github.com/cpayfinance/cpay-credit-card-gateway-wp)
+- `CPay Crypto` is for crypto payment, go to repository of [CPay Crypto](https://github.com/cpayfinance/cpay-crypto-gateway-wp)
 
 ### By Git
 
@@ -19,7 +22,9 @@ Welcome to the integration tutorial. In this section, we will show details how b
 
 2. Enter directory of WordPress, by running command `cd /path/to/wordpress/wp-content/plugins/`.
 
-3. Clone the repository from `GitHub`, by running command `git clone https://github.com/cpayfinance/cpay-crypto-gateway-wp.git`.
+3. Clone the repository from `GitHub`, by running command:
+   - `git clone https://github.com/cpayfinance/cpay-credit-card-gateway-wp.git`
+   - or `git clone https://github.com/cpayfinance/cpay-crypto-gateway-wp.git`
 
 > See the figure below:  
 > ![install-by-git](https://static.cpay.ltd/images/docs/install-by-git.png)
@@ -27,7 +32,10 @@ Welcome to the integration tutorial. In this section, we will show details how b
 
 ### or By Uploading
 
-1. Download zip from the endpoint (`https://github.com/cpayfinance/cpay-crypto-gateway-wp/archive/refs/heads/main.zip`).
+1. Download zip from the endpoint:
+   - `https://github.com/cpayfinance/cpay-credit-card-gateway-wp/archive/refs/heads/main.zip`
+   - or `https://github.com/cpayfinance/cpay-crypto-gateway-wp/archive/refs/heads/main.zip`
+
 
 2. Sign in administrator's dashboard of WordPress and upload the zip by following these steps:  
    go to `Plugins` => `Add New` => `Upload Plugin` => `Select Files` => `Install Now` => `Go to Plugin Installer`.
@@ -40,27 +48,27 @@ Welcome to the integration tutorial. In this section, we will show details how b
 1. Sign in administrator's dashboard of WordPress.
 
 2. Activate it:  
-   go to `Plugins` => `Installed Plugins` => `Inactive` => activate `CPay Crypto Payment Gateway`.
+   go to `Plugins` => `Installed Plugins` => `Inactive` => activate `CPay Crypto Payment Gateway`/`CPay Credit Card Payment Gateway`.
    
 
 ## Configuration
 1. Sign in administrator's dashboard of WordPress.
 
 2. Enable it:  
-   go to `WooCommerce` => `Settings` => `Payments` => open `CPay Crypto Enabled` => click `Save changes`.
+   go to `WooCommerce` => `Settings` => `Payments` => open `CPay Crypto Enabled`/`CPay Credit Card Enabled` => click `Save changes`.
 
 > See the figure below:  
 > ![enable-it](https://static.cpay.ltd/images/docs/enable-it.png)
 
 3. Set configuration:  
-   go to `WooCommerce` => `Settings` => `Payments` => `CPay Crypto` => click `Manage` => click `Save changes`.
+   go to `WooCommerce` => `Settings` => `Payments` => `CPay Crypto`/`CPay Credit Card` => click `Manage` => click `Save changes`.
 
 > See the figure below:  
 > ![config-it](https://static.cpay.ltd/images/docs/config-it.png)
 >> we will send the details of configuration to partner by email. The `CPay Host` lists [here](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-host.md) too.
 
 ## Usage
-After doing these steps, users will be shown payment option of `CPay Crypto` on the page of `Checkout`.
+After doing these steps above, users will be shown payment option of `CPay Crypto`/`CPay Credit Card` on the checkout page.
 
 > See the figure below:  
 > ![config-it](https://static.cpay.ltd/images/docs/checkout-page.png)
