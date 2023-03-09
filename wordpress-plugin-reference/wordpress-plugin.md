@@ -33,8 +33,8 @@ Before installing the plugin, please confirm whether to use plugin `CPay Crypto`
 ### or By Uploading
 
 1. Download zip from the endpoint:
-   - `https://github.com/cpayfinance/cpay-credit-card-gateway-wp/archive/refs/heads/main.zip`
-   - or `https://github.com/cpayfinance/cpay-crypto-gateway-wp/archive/refs/heads/main.zip`
+   - [https://github.com/cpayfinance/cpay-credit-card-gateway-wp/archive/refs/heads/main.zip](https://github.com/cpayfinance/cpay-credit-card-gateway-wp/archive/refs/heads/main.zip)
+   - or [https://github.com/cpayfinance/cpay-crypto-gateway-wp/archive/refs/heads/main.zip](https://github.com/cpayfinance/cpay-crypto-gateway-wp/archive/refs/heads/main.zip)
 
 
 2. Sign in administrator's dashboard of WordPress and upload the zip by following these steps:  
