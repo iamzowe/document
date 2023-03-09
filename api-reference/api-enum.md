@@ -2,7 +2,9 @@
 
 | Code | Description |
 | :---- | :---- |
-| 0 | Success |
+| 0 | success |
+| 1 | system error |
+| 90751002 | illegal IP |
 
 # Order Status
 

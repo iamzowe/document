@@ -12,7 +12,10 @@ Retrieve all available deposit addresses of a user.
 > However, the user can not deposit.
 
 ### Endpoint
-**GET** `http[s]://{domain}/openapi/v1/getWalletAddress`
+- REST API: *GET `http[s]://{domain}/openapi/v1/getWalletAddress`*
+- Java SDK: *-*
+- PHP SDK: *CpaySDK\Account::getWalletAddress*
+- Go SDK: *-*
 
 ### Parameters
 
@@ -89,7 +92,10 @@ curl 'https://api.cpay.ltd/openapi/v1/getWalletAddress?merchantId={merchantId}&u
 Retrieve balance of merchant's accounts.
 
 ### Endpoint
-**GET** `http[s]://{domain}/openapi/v1/getMerchantBalance`
+- REST API: *GET `http[s]://{domain}/openapi/v1/getMerchantBalance`*
+- Java SDK: *-*
+- PHP SDK: *-*
+- Go SDK: *CpaySDK\Account::getMerchantBalance*
 
 ### Parameters
 
