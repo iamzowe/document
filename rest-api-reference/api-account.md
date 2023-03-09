@@ -5,7 +5,7 @@
 ### Description
 Retrieve all available deposit addresses of a user.
 
-> Note: 
+> Note:  
 > Partner's system need to call this endpoint 
 > before your user want to deposit directly from the external crypto wallet, 
 > so cpay can generate new addresses for the user. 
