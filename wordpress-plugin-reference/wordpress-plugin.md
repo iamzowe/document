@@ -65,7 +65,7 @@ Before installing the plugin, please confirm whether to use plugin `CPay Crypto`
 
 > See the figure below:  
 > ![config-it](https://static.cpay.ltd/images/docs/config-it.png)
->> we will send the details of configuration to partner by email. The `CPay Host` lists [here](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-host.md) too.
+>> we will send the details of configuration to partner by email. The `CPay Host` lists [here](https://github.com/cpayfinance/document/blob/main/api-reference/api-host.md) too.
 
 ## Usage
 After doing these steps above, users will be shown payment option of `CPay Crypto`/`CPay Credit Card` on the checkout page.

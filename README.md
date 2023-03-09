@@ -6,7 +6,7 @@
 Partners will be provided with the following credentials:
 - `MerchantID`
 - `SecurityKey`
-- `API Host`, see [here](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-host.md)
+- `API Host`, see [here](https://github.com/cpayfinance/document/blob/main/api-reference/api-host.md)
 
 ### Step 2: Set IP whitelist
 Partners should set the IP whitelist in `CPay Merchant System` first, otherwise the request will get invalid response, such as `illegal IP`.
@@ -30,7 +30,7 @@ curl -X POST 'https://domain/openapi/v1/updateSth' -d 'xx=1001&yy=&aa=hello&sign
 
 4. Convert the ciphertext into lower case.
 
-> See a demo [here](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-signature.md)
+> See a demo [here](https://github.com/cpayfinance/document/blob/main/api-reference/api-signature.md)
 
 
 ### Step 4: Start to Integrate with CPay APIs
@@ -41,7 +41,7 @@ curl -X POST 'https://domain/openapi/v1/updateSth' -d 'xx=1001&yy=&aa=hello&sign
 <table>
 <tr>
     <td>Create Crypto Payment Order for Pay-in</td>
-    <td><a href="https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#create-crypto-order-for-pay-in">REST API</a></td>
+    <td><a href="https://github.com/cpayfinance/document/blob/main/api-reference/api-transaction.md#create-crypto-order-for-pay-in">REST API</a></td>
     <td><a href="#">PHP SDK</a></td>
     <td><a href="#">Java SDK</a></td>
     <td><a href="#">Go SDK</a></td>
@@ -49,7 +49,7 @@ curl -X POST 'https://domain/openapi/v1/updateSth' -d 'xx=1001&yy=&aa=hello&sign
 
 <tr>
     <td>Create Credit Card Payment Order for Pay-in</td>
-    <td><a href="https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#create-credit-card-order-for-pay-in">REST API</a></td>
+    <td><a href="https://github.com/cpayfinance/document/blob/main/api-reference/api-transaction.md#create-credit-card-order-for-pay-in">REST API</a></td>
     <td><a href="#">PHP SDK</a></td>
     <td><a href="#">Java SDK</a></td>
     <td><a href="#">Go SDK</a></td>
@@ -57,7 +57,7 @@ curl -X POST 'https://domain/openapi/v1/updateSth' -d 'xx=1001&yy=&aa=hello&sign
 
 <tr>
     <td>Create Withdrawal Order</td>
-    <td><a href="https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#create-withdrawal-order">REST API</a></td>
+    <td><a href="https://github.com/cpayfinance/document/blob/main/api-reference/api-transaction.md#create-withdrawal-order">REST API</a></td>
     <td><a href="#">PHP SDK</a></td>
     <td><a href="#">Java SDK</a></td>
     <td><a href="#">Go SDK</a></td>
@@ -65,7 +65,7 @@ curl -X POST 'https://domain/openapi/v1/updateSth' -d 'xx=1001&yy=&aa=hello&sign
 
 <tr>
     <td>Query Payment Order Info</td>
-    <td><a href="https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#query-payment-order-info">REST API</a></td>
+    <td><a href="https://github.com/cpayfinance/document/blob/main/api-reference/api-transaction.md#query-payment-order-info">REST API</a></td>
     <td><a href="#">PHP SDK</a></td>
     <td><a href="#">Java SDK</a></td>
     <td><a href="#">Go SDK</a></td>
@@ -73,7 +73,7 @@ curl -X POST 'https://domain/openapi/v1/updateSth' -d 'xx=1001&yy=&aa=hello&sign
 
 <tr>
     <td>Query Addresses of Crypto Wallet</td>
-    <td><a href="https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-account.md#query-addresses-of-crypto-wallet">REST API</a></td>
+    <td><a href="https://github.com/cpayfinance/document/blob/main/api-reference/api-account.md#query-addresses-of-crypto-wallet">REST API</a></td>
     <td><a href="#">PHP SDK</a></td>
     <td><a href="#">Java SDK</a></td>
     <td><a href="#">Go SDK</a></td>
@@ -81,7 +81,7 @@ curl -X POST 'https://domain/openapi/v1/updateSth' -d 'xx=1001&yy=&aa=hello&sign
 
 <tr>
     <td>Query Balance of Merchant</td>
-    <td><a href="https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-account.md#query-balance-of-merchant">REST API</a></td>
+    <td><a href="https://github.com/cpayfinance/document/blob/main/api-reference/api-account.md#query-balance-of-merchant">REST API</a></td>
     <td><a href="#">PHP SDK</a></td>
     <td><a href="#">Java SDK</a></td>
     <td><a href="#">Go SDK</a></td>
@@ -101,7 +101,7 @@ In this mode, the checkout page of bank will be used for payment using credit ca
 
 ![integrate-bank-checkout-cc](https://static.cpay.ltd/images/docs/integrate-bank-checkout-cc.png)
 
-> - API [Create Credit Card Order for Pay-in](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#create-credit-card-order-for-pay-in)
+> - API [Create Credit Card Order for Pay-in](https://github.com/cpayfinance/document/blob/main/api-reference/api-transaction.md#create-credit-card-order-for-pay-in)
     will be called with same parameters in `step 1.2`
 
 
@@ -110,7 +110,7 @@ In this mode, the checkout page of cpay will be used for payment using credit ca
 
 ![integrate-cpay-checkout-cc](https://static.cpay.ltd/images/docs/integrate-cpay-checkout-cc.png)
 
-> - API [Create Credit Card Order for Pay-in](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#create-credit-card-order-for-pay-in)
+> - API [Create Credit Card Order for Pay-in](https://github.com/cpayfinance/document/blob/main/api-reference/api-transaction.md#create-credit-card-order-for-pay-in)
     will be called with same parameters in `step 1.2`
 
 
@@ -119,7 +119,7 @@ In this mode, the checkout page of cpay will be used for payment using cryptocur
 
 ![integrate-cpay-checkout-crypto1](https://static.cpay.ltd/images/docs/integrate-cpay-checkout-crypto-1.png)
 
-> - API [Create Crypto Order for Pay-in](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#create-crypto-order-for-pay-in)
+> - API [Create Crypto Order for Pay-in](https://github.com/cpayfinance/document/blob/main/api-reference/api-transaction.md#create-crypto-order-for-pay-in)
     will be called with same parameters in `step 1.2`
 
 
