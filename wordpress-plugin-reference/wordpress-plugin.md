@@ -13,8 +13,8 @@ Welcome to the integration tutorial. In this section, we will show details how b
 
 ## Installation
 Before installing the plugin, please confirm whether to use plugin `CPay Crypto`, `CPay Credit Card`, or both.
-- `CPay Credit Card` is for credit card payment, go to repository of [CPay Credit Card](https://github.com/cpayfinance/cpay-credit-card-gateway-wp)
-- `CPay Crypto` is for crypto payment, go to repository of [CPay Crypto](https://github.com/cpayfinance/cpay-crypto-gateway-wp)
+- `CPay Credit Card` is for credit card payment => repository [CPay Credit Card](https://github.com/cpayfinance/cpay-credit-card-gateway-wp)
+- `CPay Crypto` is for crypto payment => repository [CPay Crypto](https://github.com/cpayfinance/cpay-crypto-gateway-wp)
 
 ### By Git
 
