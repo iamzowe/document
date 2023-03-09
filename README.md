@@ -1,33 +1,5 @@
 # CPay Payment Gateway Integration Tutorial
 
-## Workflow 
-
-### Mode 1
-![integrate-bank-checkout-cc](https://static.cpay.ltd/images/docs/integrate-bank-checkout-cc.png)
-
-> - API [Create Credit Card Order for Pay-in](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#create-credit-card-order-for-pay-in)
-  will be called with same parameters in `step 1.2`
-
-
-### Mode 2
-![integrate-cpay-checkout-cc](https://static.cpay.ltd/images/docs/integrate-cpay-checkout-cc.png)
-
-> - API [Create Credit Card Order for Pay-in](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#create-credit-card-order-for-pay-in)
-    will be called with same parameters in `step 1.2`
-
-
-### Mode 3
-![integrate-cpay-checkout-crypto1](https://static.cpay.ltd/images/docs/integrate-cpay-checkout-crypto-1.png)
-
-> - API [Create Crypto Order for Pay-in](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#create-crypto-order-for-pay-in)
-    will be called with same parameters in `step 1.2`
-
-
-### Mode 4
-![integrate-cpay-checkout-crypto](https://static.cpay.ltd/images/docs/integrate-cpay-checkout-crypto.png)
-
-
-
 ## Integration Flow
 
 ### Step 1: Get Credentials
@@ -36,7 +8,10 @@ Partners will be provided with the following credentials:
 - `SecurityKey`
 - `API Host`, see [here](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-host.md)
 
-### Step 2: Authentication
+### Step 2: Set IP whitelist
+Partners should set the IP whitelist in `CPay Merchant System` first, otherwise the request will get invalid response, such as `illegal IP`.
+
+### Step 3: Authentication
 The request message will be hashed with the API `SecurityKey` using `SHA256` algorithm.
 
 Examples:
@@ -57,25 +32,61 @@ curl -X POST 'https://domain/openapi/v1/updateSth' -d 'xx=1001&yy=&aa=hello&sign
 
 > See a demo [here](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-signature.md)
 
-### Step 3: Start to Integrate with CPay APIs
 
-#### Using SDK (_recommend_)
+### Step 4: Start to Integrate with CPay APIs
 
+#### Using H2H API
+> recommend: using SDK for integration
 
-#### Using REST APIs
+| Name | REST API | Go SDK | PHP SDK | Java SDK |
+| :---- | :---- | :---- | :---- | :---- |
+| Create Crypto Payment Order for Pay-in | [see](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#create-crypto-order-for-pay-in) | - | - | - |
+| Create Credit Card Payment Order for Pay-in | [see](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#create-credit-card-order-for-pay-in) | - | - | - |
+| Create Withdrawal Order | [see](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#create-withdrawal-order) | - | - | - |
+| Query Payment Order Info | [see](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#query-payment-order-info) | - | - | - |
+| Query Addresses of Crypto Wallet | [see](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-account.md#query-addresses-of-crypto-wallet) | - | - | - |
+| Query Balance of Merchant | [see]() | - | - | - |
 
-1. Create Payment Order
-- [Create Crypto Order for Pay-in](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#create-crypto-order-for-pay-in)
-- [Create Credit Card Order for Pay-in](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#create-credit-card-order-for-pay-in)
-
-2. Query Payment Order Info
-- [Query Payment Order Info](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#query-payment-order-info)
-
-3. Create Withdrawal Order
-- [Create Withdrawal Order](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#create-withdrawal-order)
 
 #### Using WordPress Plugin
+If the website of partner built by WordPress, integration using the plugin may be more graceful.
 - [Integration Tutorial for WordPress](https://github.com/cpayfinance/document/blob/main/wordpress-plugin-reference/wordpress-plugin.md)
+
+
+## How to work
+
+### Mode 1
+In this mode, the checkout page of bank will be used for payment using credit card.
+
+![integrate-bank-checkout-cc](https://static.cpay.ltd/images/docs/integrate-bank-checkout-cc.png)
+
+> - API [Create Credit Card Order for Pay-in](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#create-credit-card-order-for-pay-in)
+    will be called with same parameters in `step 1.2`
+
+
+### Mode 2
+In this mode, the checkout page of cpay will be used for payment using credit card.
+
+![integrate-cpay-checkout-cc](https://static.cpay.ltd/images/docs/integrate-cpay-checkout-cc.png)
+
+> - API [Create Credit Card Order for Pay-in](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#create-credit-card-order-for-pay-in)
+    will be called with same parameters in `step 1.2`
+
+
+### Mode 3
+In this mode, the checkout page of cpay will be used for payment using cryptocurrency.
+
+![integrate-cpay-checkout-crypto1](https://static.cpay.ltd/images/docs/integrate-cpay-checkout-crypto-1.png)
+
+> - API [Create Crypto Order for Pay-in](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-transaction.md#create-crypto-order-for-pay-in)
+    will be called with same parameters in `step 1.2`
+
+
+### Mode 4
+In this mode, payment will be completed by cryptocurrency without a checkout page.
+
+![integrate-cpay-checkout-crypto](https://static.cpay.ltd/images/docs/integrate-cpay-checkout-crypto.png)
+
 
 ## Q&A
 Q1: What are the similarities and differences between `Mode 1` and `Mode 2` ?
@@ -91,10 +102,11 @@ Q1: What are the similarities and differences between `Mode 1` and `Mode 2` ?
 Q2: What are the similarities and differences between `Mode 3` and `Mode 4` ?
 > 
 >> Similarities:
->> - 都是数字货币收款
+>> - They are both used for pay-in with cryptocurrency.
 >
 >> Differences:
->> - Mode 3 先创建订单再进行支付，Mode 4 是直接充值
+>> - In `Mode 3`, an order of business should be created in partner's system before pay-in. (see figure in section `Workflow#Mode 3`)
+>> - In `Mode 4`, users will transfer to cpay's address directly without creating an order of business. After cpay notifying the partner, the order of business may be created. (see figure in section `Workflow#Mode 4`)
 
 
 Q3: How to configure notify url ? 
