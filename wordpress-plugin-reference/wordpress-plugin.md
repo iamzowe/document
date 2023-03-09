@@ -57,7 +57,7 @@ Welcome to the integration tutorial. In this section, we will show details how b
 
 > See the figure below:  
 > ![config-it](https://static.cpay.ltd/images/docs/config-it.png)
-
+>> we will send partner the details of configuration by email. The `CPay Host` lists [here](https://github.com/cpayfinance/document/blob/main/rest-api-reference/api-host.md) too.
 
 ## Usage
 After doing these steps, users will be shown payment option of `CPay Crypto` on the page of `Checkout`.
