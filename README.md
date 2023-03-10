@@ -38,56 +38,16 @@ curl -X POST 'https://domain/openapi/v1/updateSth' -d 'xx=1001&yy=&aa=hello&sign
 #### Using H2H API
 > recommend: using SDK for integration
 
-<table>
-<tr>
-    <td>Create Crypto Payment Order for Pay-in</td>
-    <td><a href="https://github.com/cpayfinance/document/blob/main/api-reference/api-transaction.md#create-crypto-order-for-pay-in">REST API</a></td>
-    <td><a href="#">PHP SDK</a></td>
-    <td><a href="#">Java SDK</a></td>
-    <td><a href="#">Go SDK</a></td>
-</tr>
+- Transaction API
+  - [Create Crypto Payment Order for Pay-in](https://github.com/cpayfinance/document/blob/main/api-reference/api-transaction.md#create-crypto-order-for-pay-in)
+  - [Create Credit Card Payment Order for Pay-in](https://github.com/cpayfinance/document/blob/main/api-reference/api-transaction.md#create-credit-card-order-for-pay-in)
+  - [Create Withdrawal Order](https://github.com/cpayfinance/document/blob/main/api-reference/api-transaction.md#create-withdrawal-order)
+  - [Query Payment Order Info](https://github.com/cpayfinance/document/blob/main/api-reference/api-transaction.md#query-payment-order-info)
 
-<tr>
-    <td>Create Credit Card Payment Order for Pay-in</td>
-    <td><a href="https://github.com/cpayfinance/document/blob/main/api-reference/api-transaction.md#create-credit-card-order-for-pay-in">REST API</a></td>
-    <td><a href="#">PHP SDK</a></td>
-    <td><a href="#">Java SDK</a></td>
-    <td><a href="#">Go SDK</a></td>
-</tr>
+- Account API
+  - [Query Addresses of Crypto Wallet](https://github.com/cpayfinance/document/blob/main/api-reference/api-account.md#query-addresses-of-crypto-wallet)
+  - [Query Balance of Merchant](https://github.com/cpayfinance/document/blob/main/api-reference/api-account.md#query-balance-of-merchant)
 
-<tr>
-    <td>Create Withdrawal Order</td>
-    <td><a href="https://github.com/cpayfinance/document/blob/main/api-reference/api-transaction.md#create-withdrawal-order">REST API</a></td>
-    <td><a href="#">PHP SDK</a></td>
-    <td><a href="#">Java SDK</a></td>
-    <td><a href="#">Go SDK</a></td>
-</tr>
-
-<tr>
-    <td>Query Payment Order Info</td>
-    <td><a href="https://github.com/cpayfinance/document/blob/main/api-reference/api-transaction.md#query-payment-order-info">REST API</a></td>
-    <td><a href="#">PHP SDK</a></td>
-    <td><a href="#">Java SDK</a></td>
-    <td><a href="#">Go SDK</a></td>
-</tr>
-
-<tr>
-    <td>Query Addresses of Crypto Wallet</td>
-    <td><a href="https://github.com/cpayfinance/document/blob/main/api-reference/api-account.md#query-addresses-of-crypto-wallet">REST API</a></td>
-    <td><a href="#">PHP SDK</a></td>
-    <td><a href="#">Java SDK</a></td>
-    <td><a href="#">Go SDK</a></td>
-</tr>
-
-<tr>
-    <td>Query Balance of Merchant</td>
-    <td><a href="https://github.com/cpayfinance/document/blob/main/api-reference/api-account.md#query-balance-of-merchant">REST API</a></td>
-    <td><a href="#">PHP SDK</a></td>
-    <td><a href="#">Java SDK</a></td>
-    <td><a href="#">Go SDK</a></td>
-</tr>
-
-</table>
 
 #### Using WordPress Plugin
 If the website of partner built by WordPress, integration using the plugin may be more graceful.
